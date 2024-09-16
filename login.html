@@ -3,24 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio de Sesión</title>
+  <title>Guardería Canina</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>    
+        <img src="recursos/Imagenes/Logo_inicio.png" alt="logo">    
+        <li><a href="login.html">Login</a></li>
+        <li><a href="index.html">Productos</a></li>
+        <li><a href="index.html">Nosotros</a></li>
+        <li><a href="pages/contact.html">Servicios y Horarios</a></li>
+        <li><a href="pages/Cotizacion/cotizacion.html"><button>Cotiza aquí</button></a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
-    <h1>Login</h1>
-    <form id="login-form">
-      <label for="user">Usuario</label>
-      <input type="user" id="user" required>
-      
-      <label for="password">Password</label>
-      <input type="password" id="password" required>
-      
-      <button type="submit">Login</button>
-      <button type="submit">Crear cuenta</button>
-    </form>
-    <p id="error-message" style="color: red;"></p>
+    <div class="login-container">
+      <h2>Iniciar Sesión</h2>
+      <form action="dashboard.html" method="post">
+        <input type="text" name="username" placeholder="Nombre de usuario" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
   </main>
 
+  <footer>
+    <p>Guardería de Mascotas - Todos los derechos reservados</p>
+  </footer>
 </body>
 </html>
