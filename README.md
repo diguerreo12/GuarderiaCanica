@@ -20,7 +20,7 @@ Este proyecto es un sitio web para una guardería canina que ofrece servicios de
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/tu_usuario/GuarderiaCanina.git
+   git clone https://github.com/diguerreo12/GuarderiaCanina.git
  
 2. Navega a la carpeta del proyecto:
    cd GuarderiaCanina
