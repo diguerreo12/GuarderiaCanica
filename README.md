@@ -17,11 +17,10 @@ Este proyecto es un sitio web para una guardería canina que ofrece servicios de
 - **FontAwesome**: Para iconos (por ejemplo, el carrito de compras 🛒).
 
 ## Instalación
-
 1. Clona este repositorio:
 
    ```bash
- git clone https://github.com/tu_usuario/GuarderiaCanina.git
+   git clone https://github.com/tu_usuario/GuarderiaCanina.git
  
 2. Navega a la carpeta del proyecto:
    cd GuarderiaCanina
