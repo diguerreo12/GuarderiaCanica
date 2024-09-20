@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Productos - Guardería Canina</title>
+  <link rel="icon" type="image/png" href="recursos/Imagenes/Logo_perrito.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><img src="recursos/Imagenes/Logo_inicio.png" alt="logo"></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="pages/contact.html">Servicios y Horarios</a></li>
+        <li><button id="cart-button">🛒 Carrito (<span id="cart-count">0</span>)</button></li>
+        <li><a href="pages/Cotizacion/cotizacion.html"><button class="quote-button">Cotiza aquí</button></a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="titulo-contenedor">
+        <h1>Catálogo de Productos de Cuidado para Perros</h1>
+    </div>
+    <section id="catalogo-productos">
+      <!-- Productos -->
+      <div class="producto" data-id="1">
+        <img src="recursos/Imagenes/shampoo_perro.jpg" alt="Shampoo para perros">
+        <h3>Shampoo para Perros</h3>
+        <p>Shampoo hipoalergénico y natural para todo tipo de pieles.</p>
+        <p class="precio">$15.00</p>
+        <button class="add-to-cart">Agregar al carrito</button>
+      </div>
+
+      <div class="producto" data-id="2">
+        <img src="recursos/Imagenes/cepillo_perro.jpg" alt="Cepillo para perros">
+        <h3>Cepillo para Perros</h3>
+        <p>Cepillo suave que elimina el pelo muerto y desenreda nudos.</p>
+        <p class="precio">$10.00</p>
+        <button class="add-to-cart">Agregar al carrito</button>
+      </div>
+
+      <div class="producto" data-id="3">
+        <img src="recursos/Imagenes/cama_perro.jpg" alt="Cama para perros">
+        <h3>Cama para Perros</h3>
+        <p>Cama ortopédica para perros de todas las edades.</p>
+        <p class="precio">$40.00</p>
+        <button class="add-to-cart">Agregar al carrito</button>
+      </div>
+
+      <div class="producto" data-id="4">
+        <img src="recursos/Imagenes/juguete_perro.jpg" alt="Juguete para perros">
+        <h3>Juguete para Perros</h3>
+        <p>Juguete interactivo que promueve la actividad física.</p>
+        <p class="precio">$8.00</p>
+        <button class="add-to-cart">Agregar al carrito</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Guardería de Mascotas - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Script para manejar el carrito -->
+  <script>
+    // Array para almacenar productos del carrito
+    let cart = [];
+
+    // Actualizar el contador del carrito
+    function updateCartCount() {
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    // Añadir productos al carrito
+    function addToCart(product) {
+      cart.push(product);
+      updateCartCount();
+      alert(product + " ha sido añadido al carrito.");
+    }
+
+    // Escuchar los clics en los botones de "Añadir al carrito"
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const product = button.getAttribute('data-product');
+        addToCart(product);
+      });
+    });
+
+    // Redirigir a la página de checkout cuando se hace clic en el botón del carrito
+    document.getElementById('cart-button').addEventListener('click', function() {
+      window.location.href = 'checkout.html';
+    });
+  </script>
+</body>
+</html>

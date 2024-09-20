@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guardería Canina - Login</title>
+  <title>Panel de Administración - Guardería Canina</title>
   <link rel="icon" type="image/png" href="recursos/Imagenes/Logo_perrito.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -12,9 +12,9 @@
     <nav>
       <ul>
         <li><img src="recursos/Imagenes/Logo_inicio.png" alt="logo"></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="login.html">Logout</a></li>
+        <li><a href="index.html">Productos</a></li>
+        <li><a href="index.html">Nosotros</a></li>
         <li><a href="pages/contact.html">Servicios y Horarios</a></li>
         <li><a href="pages/Cotizacion/cotizacion.html"><button>Cotiza aquí</button></a></li>
       </ul>
@@ -22,13 +22,13 @@
   </header>
 
   <main>
-    <div class="login-container">
-      <h2>Iniciar Sesión</h2>
-      <form id="login-form" action="admin.html" method="post">
-        <input type="text" name="username" placeholder="Nombre de usuario" required>
-        <input type="password" name="password" placeholder="Contraseña" required>
-        <button type="submit">Entrar</button>
-      </form>
+    <div class="admin-container">
+      <h1>Panel de Administración</h1>
+      <section id="dashboard">
+        <h2>Bienvenido al panel de administración</h2>
+        <p>Desde aquí puedes gestionar usuarios, reservas, servicios y más.</p>
+        <!-- Aquí puedes incluir más secciones como formularios, tablas de datos, etc. -->
+      </section>
     </div>
   </main>
 
@@ -37,3 +37,4 @@
   </footer>
 </body>
 </html>
+

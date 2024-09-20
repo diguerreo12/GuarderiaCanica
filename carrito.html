@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guardería Canina</title>
-  <!-- Favicon -->
+  <title>Carrito - Guardería Canina</title>
   <link rel="icon" type="image/png" href="recursos/Imagenes/Logo_perrito.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -14,27 +13,31 @@
       <ul>
         <li><img src="recursos/Imagenes/Logo_inicio.png" alt="logo"></li>
         <li><a href="login.html">Login</a></li>
-        <li><a href="index.html">Productos</a></li>
-        <li><a href="index.html">Nosotros</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="pages/contact.html">Servicios y Horarios</a></li>
         <li><a href="pages/Cotizacion/cotizacion.html"><button>Cotiza aquí</button></a></li>
+        <li><button id="cart-button">🛒 Carrito (<span id="cart-count">0</span>)</button></li>
       </ul>
     </nav>
   </header>
   
   <main>
-    <div class="hero-image">
-      <img src="recursos/Imagenes/Fondo_inicio.png" alt="Imagen de fondo">
+    <h1>Carrito de Compras</h1>
+    <div id="carrito-contenido">
+      <!-- El contenido del carrito se actualizará aquí -->
     </div>
-    <h1>Guardería Canina</h1>
-    <section id="services">
-      <h2>Servicios</h2>
-      <!-- Aquí puedes incluir detalles sobre el servicio -->
-    </section>
+    <div id="carrito-total">
+      <p>Total: <span id="total">0.00</span></p>
+    </div>
+    <button id="vaciar-carrito">Vaciar Carrito</button>
+    <button id="comprar">Comprar</button>
   </main>
 
   <footer>
     <p>Guardería de Mascotas - Todos los derechos reservados</p>
   </footer>
+
+  <script src="js/carrito.js"></script>
 </body>
 </html>
