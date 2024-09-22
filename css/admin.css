@@ -1,0 +1,80 @@
+/* Estilos específicos para admin.html */
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-container h1 {
+    color: #781e95;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f4f4f9;
+    border-radius: 8px;
+  }
+  
+  .section h2 {
+    color: #781e95;
+    margin-bottom: 20px;
+  }
+  
+  .table-container {
+    width: 100%;
+    overflow-x: auto; /* Para permitir desplazamiento horizontal en pantallas pequeñas */
+  }
+  
+  .table-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-container th, .table-container td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .table-container th {
+    background-color: #781e95;
+    color: white;
+  }
+  
+  .table-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table-container tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #781e95;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #5a1478;
+  }
+  
+  /* Estilos para el footer en admin.html */
+  .admin-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    position: relative;
+  }
+  

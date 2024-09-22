@@ -4,28 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout - Guardería Canina</title>
+
+  <!-- Favicon de la página -->
   <link rel="icon" type="image/png" href="recursos/Imagenes/Logo_perrito.png">
 
+  <!-- Enlace a la hoja de estilos -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- Encabezado con barra de navegación -->
   <header>
     <nav>
       <ul>
+        <!-- Logo de la página -->
         <li><img src="recursos/Imagenes/Logo_inicio.png" alt="logo"></li>
+        
+        <!-- Enlaces de navegación -->
         <li><a href="productos.html">Productos</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="pages/contact.html">Servicios y Horarios</a></li>
+        
+        <!-- Botón del carrito -->
         <li><button id="cart-button">🛒 Carrito</button></li>
       </ul>
     </nav>
   </header>
   
+  <!-- Contenido principal -->
   <main>
     <section id="checkout-section">
       <h2>Formulario de Pago y Envío</h2>
 
-      <!-- Productos agregados -->
+      <!-- Productos agregados al carrito -->
       <div id="productos-agregados">
         <h3>Productos en tu carrito</h3>
         <table id="carrito-table">
@@ -35,18 +45,20 @@
               <th>Cantidad</th>
               <th>Precio</th>
               <th>Total</th>
-              <th>Acciones</th> <!-- Columna para el botón de eliminar -->
+              <th>Acciones</th> 
             </tr>
           </thead>
           <tbody>
-            <!-- Los productos se añadirán aquí dinámicamente -->
+            <!-- Aquí se cargarán los productos agregados -->
           </tbody>
         </table>
         <p id="total-pagar">Total a pagar: $0</p>
       </div>
 
+      <!-- Formulario para ingresar datos de envío y pago -->
       <form id="checkout-form">
-        <!-- Información de pago y envío -->
+        
+        <!-- Información del cliente -->
         <div class="form-group">
           <label for="nombre">Nombre completo</label>
           <input type="text" id="nombre" name="nombre" required>
@@ -72,7 +84,7 @@
           <input type="tel" id="telefono" name="telefono" required>
         </div>
 
-        <!-- Métodos de Pago -->
+        <!-- Métodos de pago disponibles -->
         <h3>Métodos de Pago</h3>
         <div class="form-group">
           <label for="banco">Seleccione su banco:</label>
@@ -101,6 +113,7 @@
           <input type="text" id="cvv" name="cvv" maxlength="3" required>
         </div>
 
+        <!-- Costos de envío -->
         <h3>Costos de Envío</h3>
         <div class="form-group">
           <label for="envio">Seleccione un método de envío:</label>
@@ -111,28 +124,30 @@
           </select>
         </div>
 
+        <!-- Botón para finalizar compra -->
         <button type="submit" class="checkout-btn">Finalizar Compra</button>
       </form>
     </section>
   </main>
 
+  <!-- Pie de página -->
   <footer>
     <p>Guardería de Mascotas - Todos los derechos reservados</p>
   </footer>
 
-  <!-- Script para manejar los productos del carrito -->
+  <!-- Script para gestionar el carrito y el proceso de pago -->
   <script>
-    // Datos ficticios de productos agregados para fines de demostración
+    // Simulando productos en el carrito
     let productosEnCarrito = [
       { id: 1, nombre: 'Shampoo Canino', cantidad: 2, precio: 10 },
       { id: 2, nombre: 'Collar Antipulgas', cantidad: 1, precio: 15 },
       { id: 3, nombre: 'Juguete de Goma', cantidad: 3, precio: 5 }
     ];
 
-    // Función para mostrar productos en la tabla del checkout
+    // Función para cargar productos en la tabla del carrito
     function cargarProductosEnCarrito() {
       const tbody = document.querySelector('#carrito-table tbody');
-      tbody.innerHTML = ''; // Limpiar el contenido actual
+      tbody.innerHTML = ''; 
       let totalPagar = 0;
 
       productosEnCarrito.forEach(producto => {
@@ -153,17 +168,17 @@
       document.getElementById('total-pagar').textContent = `Total a pagar: $${totalPagar.toFixed(2)}`;
     }
 
-    // Función para eliminar productos del carrito
+    // Función para eliminar producto del carrito
     function eliminarProducto(idProducto) {
       productosEnCarrito = productosEnCarrito.filter(producto => producto.id !== idProducto);
-      cargarProductosEnCarrito(); // Volver a cargar el carrito
+      cargarProductosEnCarrito(); 
     }
 
-    // Cargar productos cuando la página se carga
+    // Cargar los productos al cargar la página
     window.onload = function() {
       cargarProductosEnCarrito();
 
-      // Añadir evento de clic a los botones de eliminar
+      // Listener para eliminar productos
       document.querySelector('#carrito-table').addEventListener('click', function(event) {
         if (event.target.classList.contains('eliminar-btn')) {
           const idProducto = parseInt(event.target.getAttribute('data-id'));
@@ -172,11 +187,11 @@
       });
     };
 
-    // Simular el proceso de compra
+    // Manejar la finalización de la compra
     document.getElementById('checkout-form').addEventListener('submit', function(event) {
       event.preventDefault();
       alert("Compra realizada con éxito. ¡Gracias por tu pedido!");
-      window.location.href = "productos.html"; // Redirigir después de la compra
+      window.location.href = "productos.html"; // Redirigir a la página de productos
     });
   </script>
 </body>
