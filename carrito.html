@@ -4,40 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito - Guardería Canina</title>
+
+  <!-- Favicon de la página -->
   <link rel="icon" type="image/png" href="recursos/Imagenes/Logo_perrito.png">
+
+  <!-- Enlace a la hoja de estilos -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- Encabezado con barra de navegación -->
   <header>
     <nav>
       <ul>
+        <!-- Logo de la página -->
         <li><img src="recursos/Imagenes/Logo_inicio.png" alt="logo"></li>
+        
+        <!-- Enlaces de navegación -->
         <li><a href="login.html">Login</a></li>
         <li><a href="productos.html">Productos</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="pages/contact.html">Servicios y Horarios</a></li>
         <li><a href="pages/Cotizacion/cotizacion.html"><button>Cotiza aquí</button></a></li>
+        
+        <!-- Botón del carrito con contador -->
         <li><button id="cart-button">🛒 Carrito (<span id="cart-count">0</span>)</button></li>
       </ul>
     </nav>
   </header>
   
+  <!-- Contenido principal -->
   <main>
     <h1>Carrito de Compras</h1>
-    <div id="carrito-contenido">
-      <!-- El contenido del carrito se actualizará aquí -->
-    </div>
+
+    <!-- Sección donde se mostrarán los productos agregados al carrito -->
+    <div id="carrito-contenido"></div>
+
+    <!-- Mostrar el total acumulado de los productos en el carrito -->
     <div id="carrito-total">
       <p>Total: <span id="total">0.00</span></p>
     </div>
+
+    <!-- Botones para vaciar el carrito o proceder con la compra -->
     <button id="vaciar-carrito">Vaciar Carrito</button>
     <button id="comprar">Comprar</button>
   </main>
 
+  <!-- Pie de página -->
   <footer>
     <p>Guardería de Mascotas - Todos los derechos reservados</p>
   </footer>
 
+  <!-- Enlace al archivo JavaScript para gestionar la lógica del carrito -->
   <script src="js/carrito.js"></script>
 </body>
 </html>

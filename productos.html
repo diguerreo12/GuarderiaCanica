@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo de Productos - Guardería Canina</title>
+  <!-- Favicon de la página -->
   <link rel="icon" type="image/png" href="recursos/Imagenes/Logo_perrito.png">
+
+  <!-- Enlace a la hoja de estilos -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- Encabezado con barra de navegación -->
   <header>
     <nav>
       <ul>
+        <!-- Logo de la página -->
         <li><img src="recursos/Imagenes/Logo_inicio.png" alt="logo"></li>
+
+        <!-- Enlaces de navegación -->
         <li><a href="login.html">Login</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="pages/contact.html">Servicios y Horarios</a></li>
@@ -21,12 +28,13 @@
     </nav>
   </header>
   
+  <!-- Contenido principal -->
   <main>
     <div class="titulo-contenedor">
         <h1>Catálogo de Productos de Cuidado para Perros</h1>
     </div>
     <section id="catalogo-productos">
-      <!-- Productos -->
+      <!-- Productos en catálogo -->
       <div class="producto" data-id="1">
         <img src="recursos/Imagenes/shampoo_perro.jpg" alt="Shampoo para perros">
         <h3>Shampoo para Perros</h3>
@@ -61,37 +69,38 @@
     </section>
   </main>
 
+  <!-- Pie de página -->
   <footer>
     <p>Guardería de Mascotas - Todos los derechos reservados</p>
   </footer>
 
-  <!-- Script para manejar el carrito -->
+  
   <script>
-    // Array para almacenar productos del carrito
+    // Arreglo para almacenar los productos añadidos al carrito
     let cart = [];
 
-    // Actualizar el contador del carrito
+    // Función para actualizar el contador del carrito
     function updateCartCount() {
       document.getElementById('cart-count').textContent = cart.length;
     }
 
-    // Añadir productos al carrito
+    // Función para agregar un producto al carrito
     function addToCart(product) {
       cart.push(product);
       updateCartCount();
       alert(product + " ha sido añadido al carrito.");
     }
 
-    // Escuchar los clics en los botones de "Añadir al carrito"
+    // Evento para añadir los productos al carrito cuando se hace clic en "Agregar al carrito"
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     addToCartButtons.forEach(button => {
       button.addEventListener('click', () => {
-        const product = button.getAttribute('data-product');
+        const product = button.parentElement.querySelector('h3').textContent;
         addToCart(product);
       });
     });
 
-    // Redirigir a la página de checkout cuando se hace clic en el botón del carrito
+    // Redireccionar al checkout cuando se hace clic en el carrito
     document.getElementById('cart-button').addEventListener('click', function() {
       window.location.href = 'checkout.html';
     });
