@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Guardería Canina</title>
+  <link rel="icon" type="image/png" href="recursos/Imagenes/Logo_perrito.png">
+  <link rel="stylesheet" href="/css/stylesNew.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><img src="/recursos/Imagenes/Logo_perrito.png" alt="logo"></li>
+        <li><a href="/login.html">Login</a></li>
+        <li><a href="/productos.html">Productos</a></li>
+        <li><a href="/nosotros.html">Nosotros</a></li>
+        <li><a href="/pages/contact.html">Servicios y Horarios</a></li>
+        <li><a href="/pages/Cotizacion/cotizacion.html"><button>Cotiza aquí</button></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <h2>!Registrate¡</h2>
+      <p>Es rápido y fácil</p>
+      <form id="new-form">
+        <input type="text" id="user" name="name" placeholder="Nombre" required>
+        <input type="text" id="email" name="email" placeholder="Correo Electrónico" required>
+        <input type="text" id="user" name="name" placeholder="Número de Celular" required>
+        <input type="text" id="user" name="name" placeholder="Contraseña" required>
+        <button type="submit">Rgistrate</button>
+        <p id="error-message" style="color: red;"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>Guardería de Mascotas - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

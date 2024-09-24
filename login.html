@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Guardería Canina</title>
   <link rel="icon" type="image/png" href="recursos/Imagenes/Logo_perrito.png">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/stylesLogin.css">
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li><img src="recursos/Imagenes/Logo_inicio.png" alt="logo"></li>
+        <li><img src="/recursos/Imagenes/Logo_perrito.png" alt="logo"></li>
         <li><a href="login.html">Login</a></li>
         <li><a href="productos.html">Productos</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
@@ -28,8 +28,10 @@
         <input type="text" id="user" name="username" placeholder="Nombre de usuario" required>
         <input type="password" id="password" name="password" placeholder="Contraseña" required>
         <button type="submit">Entrar</button>
+        
         <p id="error-message" style="color: red;"></p>
       </form>
+      <a href="pages/CrearCuenta/crearCuenta.html"><button type="submit" class="btn-crear-cuenta">Crear Cuenta</button></a>
     </div>
   </main>
 
