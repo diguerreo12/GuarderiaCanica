@@ -41,6 +41,18 @@ nav ul li a, nav ul li button {
   transition: background 0.3s ease;
 }
 
+/* Especificaciones para el Logo que nos redirigira a la pagina de Inicio o index*/
+nav ul li a.logo {
+  background-color: transparent;
+  padding: 0;
+}
+
+nav ul li a.logo img {
+  width: 50px;
+  height: auto;
+  border-radius: 0;
+}
+
 nav ul li a:hover, nav ul li button:hover {
   background-color: #555;
 }

@@ -49,6 +49,8 @@ nav ul li a {
     border: none;
     border-radius: 5px;
 }
+
+/* Especificaciones para el logo que nos redirigira a la pagina de Inicio o index*/
 nav ul li a.logo {
     background-color: transparent;
     padding: 0;
