@@ -8,60 +8,58 @@
     <link rel="icon" type="image/png" href="/recursos/Imagenes/Logo_perrito.png">
     <link rel="stylesheet" href="cotizacion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Añadir estilos básicos para asegurar que el script se muestre correctamente */
-        .hidden {
-            display: none;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="image-section">
-            <img src="/recursos/Imagenes/Fondo_inicio.png" alt="Perro en la guardería" class="responsive-img">
-        </div>
-        <div class="form-section">
-            <h1>¡Sí, Nosotros Amamos a sus Mascotas!</h1>
-            <p>Por favor, registre su reserva. ¡Gracias!</p>
-            <form id="reservation-form" action="#">
-                <div class="input-group">
-                    <label for="checkin-date">Fecha de Check-in:</label>
-                    <input type="date" id="checkin-date" name="checkin_date" required>
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <div class="input-group">
-                    <label for="checkout-date">Fecha de Check-out:</label>
-                    <input type="date" id="checkout-date" name="checkout_date" required>
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <div class="input-group">
-                    <label for="service">Seleccione el servicio:</label>
-                    <select id="service" name="service" required>
-                        <option value="" selected disabled>Seleccione servicio</option>
-                        <option value="daycare_normal">Normal</option>
-                        <option value="daycare_executive">Ejecutiva</option>
-                        <option value="boarding_vip">VIP</option>
-                    </select>
-                </div>
-                <button type="button" id="submit-button">Reservar</button>
-                <p id="confirmation-message" class="hidden">¡Reserva realizada con éxito!</p>
-            </form>
-        </div>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html" class="logo"><img src="/recursos/Imagenes/Logo_perrito.png" alt="logo"></a></li>
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/productos.html">Productos</a></li>
+                <li><a href="/nosotros.html">Nosotros</a></li>
+                <li><a href="/pages/contact.html">Servicios y Horarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulario flotante -->
+    <div class="form-floating">
+        <h1>¡Sí, Nosotros Amamos a sus Mascotas!</h1>
+        <p>Por favor, registre su reserva. ¡Gracias!</p>
+        <form id="reservation-form" action="#">
+            <div class="input-group">
+                <label for="checkin-date">Fecha de Check-in:</label>
+                <input type="date" id="checkin-date" name="checkin_date" required>
+            </div>
+            <div class="input-group">
+                <label for="checkout-date">Fecha de Check-out:</label>
+                <input type="date" id="checkout-date" name="checkout_date" required>
+            </div>
+            <div class="input-group">
+                <label for="service">Seleccione el servicio:</label>
+                <select id="service" name="service" required>
+                    <option value="" selected disabled>Seleccione servicio</option>
+                    <option value="daycare_normal">Normal</option>
+                    <option value="daycare_executive">Ejecutiva</option>
+                    <option value="boarding_vip">VIP</option>
+                </select>
+            </div>
+            <button type="button" id="submit-button">Reservar</button>
+            <p id="confirmation-message">¡Reserva realizada con éxito!</p>
+        </form>
     </div>
 
+    <!-- JavaScript -->
     <script>
         document.getElementById('submit-button').addEventListener('click', function() {
-            // Realiza la validación si es necesario
             const form = document.getElementById('reservation-form');
             if (form.checkValidity()) {
-                // Muestra un mensaje de confirmación
-                document.getElementById('confirmation-message').classList.remove('hidden');
-                // Redirige a la página inicial después de 2 segundos
+                document.getElementById('confirmation-message').style.display = 'block';
                 setTimeout(function() {
-                    window.location.href = '/productos.html'; // Cambia esta ruta si es necesario
+                    window.location.href = '/productos.html';
                 }, 2000);
             } else {
-                // Muestra un mensaje de error si el formulario no es válido
                 alert('Por favor, complete todos los campos obligatorios.');
             }
         });
