@@ -27,4 +27,4 @@ Este proyecto es un sitio web para una guardería canina que ofrece servicios de
 3. Abre el archivo nosotors.html en tu navegador.
 
 
-Este archivo README proporciona información útil para cualquier persona que visite tu repositorio, ya sea para colaborar o para entender cómo funciona tu sitio web.
+Este archivo README proporciona información útil para cualquier persona que visite tu repositorio, ya sea para colaborar o para entender cómo funciona tu sitio web. 
